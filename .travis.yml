@@ -1,0 +1,11 @@
+language: rust
+
+cache: cargo
+
+before_install:
+    - sudo apt update
+    - sudo apt install libfontconfig1-dev libgraphite2-dev libharfbuzz-dev libicu-dev zlib1g-dev
+
+install: cargo install tectonic
+
+script: tectonic cv.tex
