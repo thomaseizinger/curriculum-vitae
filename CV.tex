@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.80]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{3.1cm} % Uncomment to change the width of the dates column
+\renewcommand{\baselinestretch}{1.1} 
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Thomas} % Your first name
+\familyname{Eizinger} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+%\title{Curriculum Vitae}
+\address{Donaueschingenstra{\ss}e 32 / 6 / 40}{1200 Wien}
+\mobile{+43 699 10 99 46 40}
+\email{thomas@eizinger.io}
+\homepage{eizinger.io}{http://eizinger.io}
+\photo[90pt][0.4pt]{Portrait} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\textit{Passionated software developer with a strong focus on code and software quality.\newline I am a superiously fast-learning team player who is always looking for challenges to improve himself.}
+
+\vspace{2em}
+
+\section{Work experience}
+
+\cventry{10/2017 -- today}{Software Developer}{Willhaben Internet Service GmbH \& Co KG}{}{full-time}{Maintainence and extension of the core codebase\newline Technologies: Spring Boot,  Tomcat, Java 8, Postgres, Cybase, Git}
+\cventry{09/2015 -- 06/2017}{Software Developer}{Senacor Technologies AG}{}{part-time}{Development of a sales frontend for an Austrian bank\newline Technologies: JSF, JPA, EJB, JBoss, Oracle, Java 8, Gradle, Jenkins, Git}
+\cventry{07/2014 -- 06/2015}{Intern}{IBM Softwaregroup Wien}{}{part-time}{Implementation of IBM software at client venues\newline Technologies: IBM Content Navigator, IBM WebSphere, Spring Boot, DB2}
+\cventry{01/2014 -- 12/2014}{Software Developer}{Akademikerhilfe Wien}{}{part-time}{Maintainence of a traffic contingent management software for student dorms\newline Technologies: PHP, iptables, SNMP, Linux}
+\cventry{07/2013}{Intern}{T-Mobile Austria E-Business}{}{full-time}{Development of various productivity tools for co-workers in the e-business department\newline Technologies: C\texttt{\#}, WPF}
+
+\vspace{2em}
+
+\section{Side jobs}
+
+\cventry{WS 2017}{Professor}{UAS Technikum Wien}{}{}{Lecture: Single Page Applications in JavaScript -- 1.5 ECTS}
+\cventry{02/2015 -- 06/2017}{Tutor}{UAS Technikum Wien}{}{}{C, C\texttt{++}, Java, C\texttt{\#}, Design Patterns, Testing}
+\cventry{10/2012 -- 11/2013}{Tutor}{Huemer Sch\"ulerhilfe Wien}{}{}{Mathematics}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace{2em}
+
+\section{Education}
+
+\cventry{2015 -- 2017}{Master of Science -- Software Engineering}{UAS Technikum Wien}{}{}{Thesis: API-Design in Distributed Systems:~A Comparison between GraphQL and REST}
+\cventry{2012 -- 2015}{Bachelor of Science -- Computer Science}{UAS Technikum Wien}{}{}{Thesis: Documentation of RESTful Web Services Built in Java}
+\cventry{2003 -- 2011}{Secondary school}{BRG Schloss Wagrain V\"ocklabruck, Upper Austria}{}{}{}
+
+\pagebreak
+
+\section{Projects}
+
+\cventry{since 03/2016}{nobt.io}{Open-Source Project (\url{github.com/nobt-io})}{}{}{Split your bills with ease\newline Technologies: ReactJS, Redux, Java}
+\cventry{11/2014 -- 02/2015}{FMVEA-Tool}{Austrian Institute of Technology}{}{}{\textbf{F}ailure \textbf{M}odes, \textbf{V}$\!$ulnerabilities and \textbf{E}ffects \textbf{A}nalysis\newline Technologies: AngularJS, C\texttt{\#}}
+\cventry{11/2014 -- 02/2015}{LiveEOG}{UAS Technikum Wien}{}{}{Prototyp for controlling a PC using an Electrooculograph (EOG)\newline Technologies: C\texttt{\#}, WPF}
+
+%----------------------------------------------------------------------------------------
+%	IT SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\vspace{3em}
+
+\section{Things I know best}
+
+\cvitem{Languages}{Java, JavaScript (ES6$+$), C\texttt{\#}, English (fluent in written and spoken)}
+\cvitem{Frameworks}{JavaEE, Spring, Hibernate, ReactJS, Redux (Flux)}
+\cvitem{Tools}{IntelliJ IDEA (Shortcut expert), Git, *SH}
+
+\vspace{3em}
+
+\section{Things I like best}
+
+\cvitem{}{Cryptography (esp.~Blockchain and other crypto-currency related tech), REST (Hypermedia), Design Patterns, DDD, Open-Source, DevOps, Architecture-stuff}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Sprachen}
+
+%\cvitemwithcomment{Muttersprache}{Deutsch}{}
+%\cvitemwithcomment{Erste Fremdsprache}{Englisch}{flie{\ss}end in Wort und Schrift}
+
+\end{document}
