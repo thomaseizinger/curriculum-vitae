@@ -1,11 +1,29 @@
-language: rust
+sudo: required
 
-cache: cargo
+services:
+  - docker
 
-before_install:
-    - sudo apt update
-    - sudo apt install libfontconfig1-dev libgraphite2-dev libharfbuzz-dev libicu-dev zlib1g-dev
+cache: 
+  directories:
+    - $HOME/.cache/docker-tectonic
 
-install: cargo install tectonic
+before_script:
+  - mkdir -p $HOME/.cache/docker-tectonic out
+  - chmod 0777 .
+  - chmod 0777 out
+  - chmod 0777 $HOME/.cache/docker-tectonic
 
-script: tectonic cv.tex
+script:
+  - sudo docker run -ti --rm --volume $HOME/.cache/docker-tectonic:/home/tectonic/.cache:z --volume `pwd`:/tectonic:z fabianhauser/tectonic CV.tex --outdir out
+
+before_cache:
+  - chmod 0777 $HOME/.cache/docker-tectonic -R
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: out
+  on:
+    branch: master
