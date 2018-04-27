@@ -1,4 +1,4 @@
-# Curriculum Vitae
+# Curriculum Vitae [![Build Status](https://travis-ci.org/thomaseizinger/curriculum-vitae.svg?branch=master)](https://travis-ci.org/thomaseizinger/curriculum-vitae)
 
 This repo contains the source code for my CV.
 
