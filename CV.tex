@@ -1,62 +1,25 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.11 (19/6/14)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,roman]{moderncv}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[10pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{classic}
+\moderncvcolor{green}
 
 \usepackage[scale=0.80]{geometry} % Reduce document margins
-\setlength{\hintscolumnwidth}{3.1cm} % Uncomment to change the width of the dates column
+\setlength{\hintscolumnwidth}{3.1cm}
 \renewcommand{\baselinestretch}{1.1} 
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+\firstname{Thomas}
+\familyname{Eizinger}
 
-\firstname{Thomas} % Your first name
-\familyname{Eizinger} % Your last name
-
-% All information in this block is optional, comment out any lines you don't need
-%\title{Curriculum Vitae}
+% \title{Software Engineer}
 \address{Old South Head Road 353a}{2026 North Bondi, Sydney}
 \mobile{+61 450 791 044}
 \email{thomas@eizinger.io}
 \homepage{eizinger.io}{http://eizinger.io}
 \photo[90pt][0.4pt]{Portrait} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 
-%----------------------------------------------------------------------------------------
-
 \begin{document}
 
-\makecvtitle % Print the CV title
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+\makecvtitle
 
 \textit{Passionated software developer with a strong focus on code and software quality.\newline I am a superiously fast-learning team player who is always looking for challenges to improve himself.}
 
@@ -86,10 +49,6 @@
 
 \pagebreak
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Education}
 
 \cventry{2015 -- 2017}{Master of Science -- Software Engineering}{UAS Technikum Wien}{}{}{Thesis: API-Design in Distributed Systems:~A Comparison between GraphQL and REST\\ \textit{Graduated with distinction}}
@@ -104,10 +63,6 @@
 \cventry{11/2014 -- 02/2015}{FMVEA-Tool}{Austrian Institute of Technology}{}{}{\textbf{F}ailure \textbf{M}odes, \textbf{V}$\!$ulnerabilities and \textbf{E}ffects \textbf{A}nalysis\newline Technologies: AngularJS, C\texttt{\#}}
 \cventry{11/2014 -- 02/2015}{LiveEOG}{UAS Technikum Wien}{}{}{Prototyp for controlling a PC using an Electrooculograph (EOG)\newline Technologies: C\texttt{\#}, WPF}
 
-%----------------------------------------------------------------------------------------
-%	IT SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
 \vspace{3em}
 
 \section{Things I know best}
@@ -121,14 +76,5 @@
 \section{Things I like best}
 
 \cvitem{}{Cryptography (esp.~Blockchain and other crypto-currency related tech), REST (Hypermedia), Design Patterns, DDD, Open-Source, DevOps, Architecture-stuff}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{Sprachen}
-
-%\cvitemwithcomment{Muttersprache}{Deutsch}{}
-%\cvitemwithcomment{Erste Fremdsprache}{Englisch}{flie{\ss}end in Wort und Schrift}
 
 \end{document}
