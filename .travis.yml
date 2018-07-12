@@ -3,21 +3,16 @@ sudo: required
 services:
   - docker
 
-cache: 
+cache:
   directories:
-    - $HOME/.cache/docker-tectonic
+  - $HOME/.cache/docker-tectonic
 
 before_script:
-  - mkdir -p $HOME/.cache/docker-tectonic out
-  - chmod 0777 .
-  - chmod 0777 out
-  - chmod 0777 $HOME/.cache/docker-tectonic
+  - make create_out_dir
+  # We need 0777 for these folders because tectonic runs under the user 'tectonic' in the docker container.
+  - chmod 0777 $HOME/.cache/docker-tectonic out
 
-script:
-  - sudo docker run -ti --rm --volume $HOME/.cache/docker-tectonic:/home/tectonic/.cache:z --volume `pwd`:/tectonic:z fabianhauser/tectonic CV.tex --outdir out
-
-before_cache:
-  - chmod 0777 $HOME/.cache/docker-tectonic -R
+script: make CV
 
 deploy:
   provider: pages
