@@ -3,6 +3,11 @@ sudo: required
 services:
   - docker
 
+addons:
+  apt:
+    packages:
+    - fonts-font-awesome
+
 cache:
   directories:
   - $HOME/.cache/docker-tectonic
