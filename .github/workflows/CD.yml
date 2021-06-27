@@ -19,6 +19,7 @@ jobs:
       - uses: wtfjoke/setup-tectonic@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: apt install fonts-font-awesome
       - run: tectonic CV.tex
       - uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
