@@ -21,8 +21,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: sudo apt install fonts-font-awesome
       - run: tectonic CV.tex
-      - uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+      - uses: crazy-max/ghaction-github-pages@v2
         with:
-          dir: out
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: gh-pages
+          build_dir: out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
