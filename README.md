@@ -1,4 +1,4 @@
-# Curriculum Vitae [![Build Status](https://travis-ci.org/thomaseizinger/curriculum-vitae.svg?branch=master)](https://travis-ci.org/thomaseizinger/curriculum-vitae)
+# Curriculum Vitae [![Continuous deployment](https://github.com/thomaseizinger/curriculum-vitae/actions/workflows/CD.yml/badge.svg)](https://github.com/thomaseizinger/curriculum-vitae/actions/workflows/CD.yml)
 
 This repo contains the source code for my CV.
 
