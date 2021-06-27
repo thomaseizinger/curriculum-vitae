@@ -1,0 +1,27 @@
+name: Continuous deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/Tectonic
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+          restore-keys: |
+           ${{ runner.os }}-tectonic-
+      - uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: tectonic CV.tex
+      - uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+        with:
+          dir: out
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
