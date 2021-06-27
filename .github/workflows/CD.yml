@@ -20,7 +20,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: sudo apt install fonts-font-awesome
-      - run: tectonic CV.tex
+      - run: |
+          mkdir ./out
+          tectonic CV.tex --outdir ./out
       - uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
