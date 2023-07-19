@@ -22,7 +22,8 @@ jobs:
       - run: sudo apt install fonts-font-awesome
       - run: |
           mkdir ./out
-          tectonic *.tex --outdir ./out
+          tectonic work-CV.tex --outdir ./out
+          tectonic sailing-CV.tex --outdir ./out
       - uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
